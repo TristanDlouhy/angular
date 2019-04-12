@@ -6,6 +6,12 @@ import {
   AppComponent
 } from './components';
 
+// Material
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// * disable material animation
+// import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+
 // FontAwesome
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -19,7 +25,12 @@ import {
   ],
   imports: [
     BrowserModule,
-    FontAwesomeModule
+    BrowserAnimationsModule,
+    // * disable material animation
+    // NoopAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
